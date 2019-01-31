@@ -1,2 +1,18 @@
 <h1>First page in Ruby </h1>
 <p>My name is <%= @name %></p>
+
+<h1>Condition </h1>
+
+<% if @level == 'Novice' %>
+<p> Je suis <%= @level%>Encore du boulot, j'abandonnerai pas</p>
+<% elsif @level == 'Intermediaire' %>
+<p> Je suis <%= @level%> On commence a voir le bout du tunnel </p>
+<%  else %>
+<p> Je suis <%= @level%> J'excelle ! Mais j'apprend toujours ! </p>
+<% end %>
+
+<h1> Les confessions </h1>
+
+<% @number.times do |num| %>
+  <p><%= num %>) je suis un éternel apprenti </p>
+<%end%>
