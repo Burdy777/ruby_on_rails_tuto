@@ -1,0 +1,11 @@
+<h1>Enregistrer un livre</h1>
+<%= form_tag "/books", method: "post" do %>
+<input type="text" name="title"/>
+<input type="submit" value="enregistrer un livre">
+<%end%>
+
+
+<h1> Mes livres <h1>
+<% @all_books.each do |book| %>
+  <a href="books/<%= book.id %>"><p> <%= book.title %> </p></a>
+<% end %>

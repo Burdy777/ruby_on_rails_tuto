@@ -1,0 +1,4 @@
+<%= form_tag '/book/<%= @book.id %>' method: 'patch'%>
+<input type="text" name="title"/>
+<input type="submit" value="mettre à jour mon livre">
+<%end%>

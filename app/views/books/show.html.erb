@@ -1,0 +1,16 @@
+<p>Nom du livre: <strong> <%= @book.title %></strong></p>
+
+<h2>Modifier le nom du livre</h2>
+<%= form_tag "/books/#{@book.id}", method: "patch" do%>
+<input type="text" name="title"/>
+<input type="submit" value="mettre à jour mon livre">
+<% end %>
+
+<hr style="margin:3em 0em;">
+
+<h2>Supprimer le livre</h2>
+<%= form_tag "/books/#{@book.id}", method: "delete" do%>
+<input type="submit" value="supprimer le livre">
+<% end %>
+
+<p><a href="/books">Retourner à l'index'</a></p>
